@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Dashboard | Buku Kita</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body id="halaman-dashboard">
+		<aside id="navigasiDashboard">
+			<header>
+				<a href="dashboard.html">BUKU KITA<span>.</span></a>
+				<p>MENU TOKO BUKU</p>
+			</header>
+			<button id="tombolTutupMenu" type="button">Tutup menu</button>
+			<nav>
+				<a href="dashboard.html">Ringkasan</a>
+				<a href="stok.html">Informasi stok / katalog</a>
+				<a href="tracking.html">Tracking pengiriman</a>
+				<a href="checkout.html">Buat pesanan</a>
+				<button id="bukaLaporan" type="button">Laporan pemesanan</button>
+				<button id="bukaRiwayat" type="button">Histori transaksi</button>
+			</nav>
+			<footer>
+				<p id="namaAdmin">Pengelola toko</p>
+				<button id="tombolKeluar" type="button">Keluar</button>
+			</footer>
+		</aside>
+
+		<main id="kontenDashboard">
+			<button id="tombolBukaMenu" type="button">Menu</button>
+			<header id="kepalaDashboard">
+				<p>BUKU KITA <span>/</span> RINGKASAN</p>
+				<p id="tanggalHariIni"></p>
+			</header>
+			<section id="sambutan">
+				<p>DASHBOARD TOKO BUKU</p>
+				<h1 id="sapaanWaktu">Selamat datang</h1>
+				<p>Pantau koleksi dan aktivitas pengiriman dari satu tempat.</p>
+			</section>
+
+			<section id="ringkasanToko">
+				<h2>Ringkasan toko</h2>
+				<div>
+					<div class="card">
+						<p>Jumlah judul buku</p>
+						<strong id="jumlahJudulBuku">0</strong>
+					</div>
+					<div class="card">
+						<p>Total stok buku</p>
+						<strong id="jumlahStokBuku">0</strong>
+					</div>
+					<div class="card">
+						<p>Pesanan terlacak</p>
+						<strong id="jumlahPesanan">0</strong>
+					</div>
+				</div>
+			</section>
+
+			<section id="aksesDashboard">
+				<h2>Akses cepat</h2>
+				<nav>
+					<a href="stok.html">Kelola katalog <span>>></span></a>
+					<a href="tracking.html">Cari pengiriman <span>>></span></a>
+					<a href="checkout.html">Buat pesanan <span>>></span></a>
+				</nav>
+			</section>
+
+			<section id="peringatanStok">
+				<h2>Perhatian stok</h2>
+				<p id="pesanStok">Memeriksa stok buku...</p>
+				<ul id="daftarStokMenipis"></ul>
+			</section>
+		</main>
+
+		<dialog id="dialogLaporan">
+			<button id="tutupLaporan" type="button">Tutup</button>
+			<h2>Laporan pemesanan</h2>
+			<ul id="isiLaporan"></ul>
+		</dialog>
+		<dialog id="dialogRiwayat">
+			<button id="tutupRiwayat" type="button">Tutup</button>
+			<h2>Histori transaksi</h2>
+			<ul id="isiRiwayat"></ul>
+		</dialog>
+		<div id="areaNotifikasi" aria-live="polite"></div>
+		<script src="js/data.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

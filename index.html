@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Masuk | Buku Kita</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body id="halaman-masuk">
+		<main>
+			<section id="ilustrasi">
+				<a href="index.html">BUKU KITA<span>.</span></a>
+				<figure>
+					<img
+						src="img/pengantar_komunikasi.jpg"
+						alt="Sampul buku Pengantar Ilmu Komunikasi"
+					/>
+					<img src="img/kepemimpinan.jpg" alt="Sampul buku Kepemimpinan" />
+					<img
+						src="img/mikrobiologi.jpg"
+						alt="Sampul buku Mikrobiologi Dasar"
+					/>
+					<figcaption>
+						Koleksi pilihan untuk menemani proses belajarmu.
+					</figcaption>
+				</figure>
+				<header>
+					<p>RUANG UNTUK TERUS BELAJAR</p>
+					<h1>Satu buku bisa membuka banyak kemungkinan.</h1>
+					<p>Temukan buku ajar pilihan dan kelola pesananmu dengan mudah.</p>
+				</header>
+			</section>
+
+			<section id="masuk">
+				<header>
+					<p>SELAMAT DATANG KEMBALI</p>
+					<h2>Masuk ke akunmu</h2>
+					<p>Masukkan email dan password untuk melanjutkan.</p>
+				</header>
+				<form id="formMasuk">
+					<label for="emailMasuk">Email</label>
+					<input
+						id="emailMasuk"
+						name="emailMasuk"
+						type="email"
+						placeholder="nama@email.com"
+						required
+					/>
+					<label for="kataSandiMasuk">Password</label>
+					<span>
+						<input
+							id="kataSandiMasuk"
+							name="kataSandiMasuk"
+							type="password"
+							placeholder="Masukkan password"
+							required
+						/>
+						<button id="tombolLihatKataSandi" type="button">
+							<img
+								id="ikonKataSandi"
+								src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/icons/eye.svg"
+								alt="Tampilkan password"
+							/>
+						</button>
+					</span>
+					<button type="submit">Masuk</button>
+				</form>
+				<nav>
+					<button id="bukaLupaKataSandi" type="button">Lupa password?</button>
+					<button id="bukaDaftarAkun" type="button">Daftarkan akun</button>
+				</nav>
+				<p>Akun demo untuk mencoba:</p>
+				<ul>
+					<li>rina@gmail.com / rina123</li>
+					<li>agus@gmail.com / agus123 (Admin)</li>
+					<li>siti@gmail.com / siti123</li>
+				</ul>
+			</section>
+		</main>
+
+		<dialog id="dialogLupaKataSandi">
+			<button id="tutupLupaKataSandi" type="button">Tutup</button>
+			<p>BANTUAN AKUN</p>
+			<h2>Lupa password?</h2>
+			<p>
+				Masukkan email akunmu. Pada demo ini, instruksi pemulihan hanya
+				ditampilkan di layar.
+			</p>
+			<form id="formLupaKataSandi">
+				<label for="emailLupaKataSandi">Email</label>
+				<input
+					id="emailLupaKataSandi"
+					type="email"
+					placeholder="nama@email.com"
+					required
+				/>
+				<button type="submit">Kirim instruksi</button>
+			</form>
+		</dialog>
+		<dialog id="dialogDaftarAkun">
+			<button id="tutupDialogDaftarAkun" type="button">Tutup</button>
+			<p>AKUN BARU</p>
+			<h2>Daftar akun demo</h2>
+			<form id="formDaftarAkun">
+				<label for="namaDaftarAkun">Nama</label>
+				<input id="namaDaftarAkun" required placeholder="Nama lengkap" />
+				<label for="emailDaftarAkun">Email</label>
+				<input
+					id="emailDaftarAkun"
+					type="email"
+					required
+					placeholder="nama@email.com"
+				/>
+				<label for="kataSandiDaftarAkun">Password</label>
+				<input
+					id="kataSandiDaftarAkun"
+					type="password"
+					required
+					placeholder="Masukkan password"
+				/>
+				<button type="submit">Buat akun demo</button>
+			</form>
+		</dialog>
+		<div id="areaNotifikasi" aria-live="polite"></div>
+		<script src="js/data.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

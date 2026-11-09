@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Pemesanan | Buku Kita</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body id="halaman-checkout">
+		<aside id="navigasiCheckout">
+			<header>
+				<a href="dashboard.html">BUKU KITA<span>.</span></a>
+				<p>MENU TOKO BUKU</p>
+			</header>
+			<button id="tombolTutupMenu" type="button">Tutup menu</button>
+			<nav>
+				<a href="dashboard.html">Ringkasan</a>
+				<a href="stok.html">Katalog buku</a>
+				<a href="tracking.html">Tracking pengiriman</a>
+				<a href="checkout.html">Buat pesanan</a>
+			</nav>
+			<footer>
+				<a href="stok.html">Kembali ke katalog</a>
+			</footer>
+		</aside>
+		<main id="kontenCheckout">
+			<button id="tombolBukaMenu" type="button">☰ Menu</button>
+			<header id="kepalaCheckout">
+				<p>BUKU KITA <span>/</span> PEMESANAN</p>
+				<a href="tracking.html">Lacak pesanan</a>
+			</header>
+			<section id="sambutanCheckout">
+				<p>PEMESANAN BARU</p>
+				<h1>Checkout</h1>
+				<p>Periksa keranjang dan lengkapi informasi penerima.</p>
+			</section>
+			<form id="formCheckout">
+				<section id="bagianKeranjang">
+					<h2>Keranjang pesanan</h2>
+					<div id="daftarKeranjang"></div>
+					<p id="totalPembayaran">Total pembayaran: Rp0</p>
+				</section>
+				<section id="bagianPemesan">
+					<h2>Informasi pemesan</h2>
+					<label for="namaPemesan">Nama lengkap</label>
+					<input id="namaPemesan" type="text" placeholder="Nama penerima" required />
+					<label for="emailPemesan">Email</label>
+					<input id="emailPemesan" type="email" placeholder="nama@email.com" required />
+					<label for="teleponPemesan">Nomor telepon</label>
+					<input id="teleponPemesan" type="tel" placeholder="08xxxxxxxxxx" required />
+					<label for="alamatPengiriman">Alamat pengiriman</label>
+					<textarea id="alamatPengiriman" rows="3" placeholder="Jalan, kota, kode pos" required></textarea>
+					<label for="metodePembayaran">Metode pembayaran</label>
+					<select id="metodePembayaran" required>
+						<option value="">Pilih metode</option>
+						<option value="Transfer bank">Transfer bank</option>
+						<option value="Virtual account">Virtual account</option>
+						<option value="COD">COD</option>
+					</select>
+					<button type="submit">Buat pesanan</button>
+				</section>
+			</form>
+		</main>
+		<div id="areaNotifikasi"></div>
+		<script src="js/data.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

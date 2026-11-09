@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Tracking Pengiriman | Buku Kita</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body id="halaman-tracking">
+		<aside id="navigasiTracking">
+			<header>
+				<a href="dashboard.html">BUKU KITA<span>.</span></a>
+				<p>MENU TOKO BUKU</p>
+			</header>
+			<button id="tombolTutupMenu" type="button">Tutup menu</button>
+			<nav>
+				<a href="dashboard.html">Ringkasan</a>
+				<a href="stok.html">Katalog buku</a>
+				<a href="tracking.html">Tracking pengiriman</a>
+				<a href="checkout.html">Buat pesanan</a>
+			</nav>
+			<footer>
+				<a href="checkout.html">Lihat keranjang</a>
+			</footer>
+		</aside>
+		<main id="kontenTracking">
+			<button id="tombolBukaMenu" type="button">☰ Menu</button>
+			<header id="kepalaTracking">
+				<p>BUKU KITA <span>/</span> PENGIRIMAN</p>
+				<a href="checkout.html">Buat pesanan</a>
+			</header>
+			<section id="sambutanTracking">
+				<p>LACAK PESANAN</p>
+				<h1>Tracking Pengiriman</h1>
+				<p>Masukkan nomor delivery order untuk melihat status paket.</p>
+			</section>
+			<section id="pencarianTracking">
+				<h2>Cari nomor DO</h2>
+				<form id="formTracking">
+					<label for="nomorDO">Nomor delivery order</label>
+					<div>
+						<input
+							id="nomorDO"
+							type="text"
+							placeholder="Contoh: 20230012"
+							required
+						/>
+						<button type="submit">Cari pesanan</button>
+					</div>
+				</form>
+				<p>Nomor demo:</p>
+				<button id="tombolDemoSatu" type="button">20230012</button>
+				<button id="tombolDemoDua" type="button">20230013</button>
+				<p id="pesanTracking"></p>
+			</section>
+			<div id="hasilTracking"></div>
+		</main>
+		<script src="js/data.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

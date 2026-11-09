@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<title>Katalog Buku | Buku Kita</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body id="halaman-stok">
+		<aside id="navigasiStok">
+			<header>
+				<a href="dashboard.html">BUKU KITA<span>.</span></a>
+				<p>MENU TOKO BUKU</p>
+			</header>
+			<button id="tombolTutupMenu" type="button">Tutup menu</button>
+			<nav>
+				<a href="dashboard.html">Ringkasan</a>
+				<a href="stok.html">Katalog buku</a>
+				<a href="tracking.html">Tracking pengiriman</a>
+				<a href="checkout.html">Buat pesanan</a>
+			</nav>
+			<footer>
+				<a href="checkout.html">Keranjang pesanan (<span id="cartCount">0</span>)</a>
+			</footer>
+		</aside>
+		<main id="kontenStok">
+			<button id="tombolBukaMenu" type="button">☰ Menu</button>
+			<header id="kepalaStok">
+				<p>BUKU KITA <span>/</span> KATALOG</p>
+				<a href="checkout.html">Lihat pesanan</a>
+			</header>
+			<section id="sambutanStok">
+				<p>KOLEKSI BUKU</p>
+				<h1>Katalog Buku</h1>
+				<p>Pilih buku untuk dimasukkan ke pesanan.</p>
+			</section>
+			<section id="alatKatalog">
+				<h2>Daftar buku</h2>
+				<label for="pencarianBuku">Cari judul atau kode buku</label>
+				<div>
+					<input id="pencarianBuku" type="search" placeholder="Contoh: Manajemen atau EKMA4002" />
+					<button id="bukaFormBuku" type="button">Tambah buku</button>
+				</div>
+				<p id="jumlahBuku"></p>
+				<p id="pesanKosong"></p>
+				<div id="daftarBuku"></div>
+			</section>
+		</main>
+		<dialog id="dialogTambahBuku">
+			<button id="tutupFormBuku" type="button">Tutup</button>
+			<h2>Tambah buku ke katalog</h2>
+			<form id="formTambahBuku">
+				<label for="kodeBukuBaru">Kode buku</label>
+				<input id="kodeBukuBaru" type="text" required />
+				<label for="namaBukuBaru">Judul buku</label>
+				<input id="namaBukuBaru" type="text" required />
+				<label for="jenisBukuBaru">Jenis buku</label>
+				<input id="jenisBukuBaru" type="text" required />
+				<label for="edisiBukuBaru">Edisi</label>
+				<input id="edisiBukuBaru" type="text" required />
+				<label for="stokBukuBaru">Stok</label>
+				<input id="stokBukuBaru" type="number" min="0" required />
+				<label for="hargaBukuBaru">Harga (angka Rupiah)</label>
+				<input id="hargaBukuBaru" type="number" min="1" required />
+				<button type="submit">Simpan buku</button>
+			</form>
+		</dialog>
+		<div id="areaNotifikasi"></div>
+		<script src="js/data.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
+
